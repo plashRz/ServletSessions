@@ -20,9 +20,12 @@ public class initParamServlet extends HttpServlet {
 		String s1 = getServletConfig().getInitParameter("a1");
 		String s2 = getServletConfig().getInitParameter("a2");
 		String s3 = getServletConfig().getServletName();
+		String s4 = getServletContext().getInitParameter("name");
+		String s5 = getServletContext().getInitParameter("access");
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		pw.println("s1: "+s1+"<br> s2: "+s2+"<br> s3: "+s3);
+		pw.println("<br>s4: "+s4+"<br> s5: "+s5);
 	}
 
 

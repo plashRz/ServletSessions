@@ -32,4 +32,12 @@
     <servlet-name>initParamServlet</servlet-name>
     <url-pattern>/ipS</url-pattern>
   </servlet-mapping>
+  <context-param>
+  <param-name>name</param-name>
+  <param-value>adam</param-value>
+  </context-param>
+  <context-param>
+  <param-name>access</param-name>
+  <param-value>level 5</param-value>
+  </context-param>
 </web-app>
