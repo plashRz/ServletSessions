@@ -14,4 +14,22 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/ls</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>initParamServlet</display-name>
+    <servlet-name>initParamServlet</servlet-name>
+    <servlet-class>pack1.initParamServlet</servlet-class>
+    <init-param>
+    <param-name>a1</param-name>
+    <param-value>100</param-value>
+    </init-param>
+    <init-param>
+    <param-name>a2</param-name>
+    <param-value>200</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initParamServlet</servlet-name>
+    <url-pattern>/ipS</url-pattern>
+  </servlet-mapping>
 </web-app>
