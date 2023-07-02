@@ -23,6 +23,10 @@ public class s3 extends HttpServlet {
 		b= Integer.parseInt(getServletContext().getInitParameter("b"));
 		d= Integer.parseInt(getServletConfig().getInitParameter("d"));
 
+		response.getWriter().append("Value of a is: "+a+"\n");
+		response.getWriter().append("Value of b is: "+b+"\n");
+		response.getWriter().append("Value of d is: "+d+"\n");
+		
 		response.getWriter().append("Sum is: "+(a+b+d));
 		
 	}

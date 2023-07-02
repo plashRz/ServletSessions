@@ -23,6 +23,12 @@ public class s2 extends HttpServlet {
 		b= Integer.parseInt(getServletContext().getInitParameter("b"));
 		c= Integer.parseInt(getServletContext().getInitParameter("c"));
 		d= Integer.parseInt(getServletConfig().getInitParameter("d"));
+		
+		response.getWriter().append("Value of a is: "+a+"<br>");
+		response.getWriter().append("Value of b is: "+b+"<br>");
+		response.getWriter().append("Value of c is: "+c+"<br>");
+		response.getWriter().append("Value of d is: "+d+"<br>");
+		response.getWriter().append("<hr>");
 		response.setContentType("text/html");
 		response.getWriter().append("Mul is: "+(a*d));
 		response.getWriter().append("<br>Sub is: "+(b-c));

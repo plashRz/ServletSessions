@@ -82,6 +82,8 @@
     <servlet-name>s3</servlet-name>
     <url-pattern>/s3</url-pattern>
   </servlet-mapping>
+  
+  
   <context-param>
     <param-name>a</param-name>
     <param-value>2</param-value>
@@ -94,6 +96,8 @@
     <param-name>c</param-name>
     <param-value>6</param-value>
   </context-param>
+  
+  
   <filter>
     <filter-name>AuthFilter</filter-name>
     <filter-class>pack1.FiltersJ.AuthFilter</filter-class>
