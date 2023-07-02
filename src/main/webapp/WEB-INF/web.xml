@@ -45,7 +45,7 @@
     <display-name>s1</display-name>
     <servlet-name>s1</servlet-name>
     <servlet-class>pack1.s1</servlet-class>
-        <init-param>
+    <init-param>
       <param-name>d</param-name>
       <param-value>5</param-value>
     </init-param>
@@ -59,7 +59,7 @@
     <display-name>s2</display-name>
     <servlet-name>s2</servlet-name>
     <servlet-class>pack1.s2</servlet-class>
-            <init-param>
+    <init-param>
       <param-name>d</param-name>
       <param-value>15</param-value>
     </init-param>
@@ -73,7 +73,7 @@
     <display-name>s3</display-name>
     <servlet-name>s3</servlet-name>
     <servlet-class>pack1.s3</servlet-class>
-            <init-param>
+    <init-param>
       <param-name>d</param-name>
       <param-value>25</param-value>
     </init-param>
@@ -82,18 +82,75 @@
     <servlet-name>s3</servlet-name>
     <url-pattern>/s3</url-pattern>
   </servlet-mapping>
-  
-    <context-param>
+  <context-param>
     <param-name>a</param-name>
     <param-value>2</param-value>
   </context-param>
-      <context-param>
+  <context-param>
     <param-name>b</param-name>
     <param-value>4</param-value>
   </context-param>
-      <context-param>
+  <context-param>
     <param-name>c</param-name>
     <param-value>6</param-value>
   </context-param>
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>pack1.FiltersJ.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <servlet-name>fd</servlet-name>
+  </filter-mapping>
+  <filter>
+    <display-name>LoggerFilter</display-name>
+    <filter-name>LoggerFilter</filter-name>
+    <filter-class>pack1.FiltersJ.LoggerFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoggerFilter</filter-name>
+    <servlet-name>fd</servlet-name>
+  </filter-mapping>
   
+  
+  <filter>
+    <display-name>filter1</display-name>
+    <filter-name>filter1</filter-name>
+    <filter-class>pack1.FiltersJ.filter1</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filter1</filter-name>
+    <url-pattern>/fd2</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>filter2</display-name>
+    <filter-name>filter2</filter-name>
+    <filter-class>pack1.FiltersJ.filter2</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filter2</filter-name>
+    <url-pattern>/fd2</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>fd</display-name>
+    <servlet-name>fd</servlet-name>
+    <servlet-class>pack1.fd</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fd</servlet-name>
+    <url-pattern>/fd</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>fd2</display-name>
+    <servlet-name>fd2</servlet-name>
+    <servlet-class>pack1.fd2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>fd2</servlet-name>
+    <url-pattern>/fd2</url-pattern>
+  </servlet-mapping>
 </web-app>
