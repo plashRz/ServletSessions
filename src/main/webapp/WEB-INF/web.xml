@@ -20,12 +20,12 @@
     <servlet-name>initParamServlet</servlet-name>
     <servlet-class>pack1.initParamServlet</servlet-class>
     <init-param>
-    <param-name>a1</param-name>
-    <param-value>100</param-value>
+      <param-name>a1</param-name>
+      <param-value>100</param-value>
     </init-param>
     <init-param>
-    <param-name>a2</param-name>
-    <param-value>200</param-value>
+      <param-name>a2</param-name>
+      <param-value>200</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
@@ -33,11 +33,67 @@
     <url-pattern>/ipS</url-pattern>
   </servlet-mapping>
   <context-param>
-  <param-name>name</param-name>
-  <param-value>adam</param-value>
+    <param-name>name</param-name>
+    <param-value>adam</param-value>
   </context-param>
   <context-param>
-  <param-name>access</param-name>
-  <param-value>level 5</param-value>
+    <param-name>access</param-name>
+    <param-value>level 5</param-value>
   </context-param>
+  <servlet>
+    <description></description>
+    <display-name>s1</display-name>
+    <servlet-name>s1</servlet-name>
+    <servlet-class>pack1.s1</servlet-class>
+        <init-param>
+      <param-name>d</param-name>
+      <param-value>5</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s1</servlet-name>
+    <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>s2</display-name>
+    <servlet-name>s2</servlet-name>
+    <servlet-class>pack1.s2</servlet-class>
+            <init-param>
+      <param-name>d</param-name>
+      <param-value>15</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s2</servlet-name>
+    <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>s3</display-name>
+    <servlet-name>s3</servlet-name>
+    <servlet-class>pack1.s3</servlet-class>
+            <init-param>
+      <param-name>d</param-name>
+      <param-value>25</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s3</servlet-name>
+    <url-pattern>/s3</url-pattern>
+  </servlet-mapping>
+  
+    <context-param>
+    <param-name>a</param-name>
+    <param-value>2</param-value>
+  </context-param>
+      <context-param>
+    <param-name>b</param-name>
+    <param-value>4</param-value>
+  </context-param>
+      <context-param>
+    <param-name>c</param-name>
+    <param-value>6</param-value>
+  </context-param>
+  
 </web-app>

@@ -16,15 +16,16 @@ public class LoginServlet extends HttpServlet {
 
 		String name = request.getParameter("user");
 		String pass = request.getParameter("pass");
+		int b = request.getContentLength();
 		response.setContentType("text/html");
 		PrintWriter pw = response.getWriter();
 		
 		if(name.equals("user1")&&pass.equals("pass1")) {
-			pw.println("Welcome "+name);
+			pw.println("Welcome "+name+" "+b);
 		}else {
-			pw.println("Invalid user");
+			pw.println("Invalid user"+" "+b);
 		}
-		
+		pw.println(request.getServerName()+getServletInfo());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
