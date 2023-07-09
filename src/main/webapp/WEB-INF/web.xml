@@ -189,4 +189,17 @@
     <servlet-name>storeData</servlet-name>
     <url-pattern>/sd</url-pattern>
   </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>jdtut</display-name>
+    <servlet-name>jdtut</servlet-name>
+    <servlet-class>pack3.jdtut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>jdtut</servlet-name>
+    <url-pattern>/jdtut</url-pattern>
+  </servlet-mapping>
+
 </web-app>
